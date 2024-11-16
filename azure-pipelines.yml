@@ -19,10 +19,13 @@ steps:
     ng build
     ls -la 
     pwd
+    cd dist
+    ls -la
+    pwd
   displayName: 'npm install and build'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'Json-server-Angular-UI/dist'
+    PathtoPublish: 'dist/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
